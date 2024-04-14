@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
 public class Comic {
-    public String name;
-    public double number;
-    public String[] writer;
-    public String[] artist;
+    String name;
+    double number;
+    String[] writer;
+    String[] artist;
 
     public Comic(String name, double number){
         this.name = name;

@@ -9,6 +9,11 @@ public class Manager {
         displayComics();
         addComic("Amazing Spider-Man", 143, new String[]{"Gerry Conway"}, new String[]{"Ross Andru"});
         addComic("Amazing Spider-Man", 500, new String[]{"J. Michael Straczynski"}, new String[]{"John Romita, Jr."});
+        addComic("Amazing Spider-Man", 501, new String[]{"J. Michael Straczynski"}, new String[]{"John Romita, Jr."});
+        addComic("Amazing Spider-Man", 502, new String[]{"J. Michael Straczynski"}, new String[]{"John Romita, Jr."});
+        addComic("Amazing Spider-Man", 503, new String[]{"J. Michael Straczynski"}, new String[]{"John Romita, Jr."});
+        addComic("Amazing Spider-Man", 504, new String[]{"J. Michael Straczynski"}, new String[]{"John Romita, Jr."});
+        addComic("Amazing Spider-Man", 700, new String[]{"Dan Slott"}, new String[]{"Humberto Ramos"});
         addComic("Peter Parker, The Spectacular Spider-Man", 87, new String[]{"Bill Mantlo"}, new String[]{"Al Milgrom"});
         displayComics();
     }

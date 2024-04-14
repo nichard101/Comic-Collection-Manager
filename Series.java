@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Series {
     public String name;
@@ -79,8 +80,38 @@ public class Series {
      */
     public void displaySeries(){
         System.out.println(name + " - " + getSize() + " issues\n");
-        for(Comic c : comicList){
-            System.out.println(c.displayComic() + "\n");
+
+        Comic start = comicList.get(0);
+        Comic end = comicList.get(0);
+        int i = 0;
+
+        while(i < getSize()){
+            Comic tempComic = comicList.get(i);
+            if(i == getSize()-1){
+                if(!Arrays.toString(tempComic.getWriter()).equals(Arrays.toString(start.getWriter()))){
+                    System.out.println(displayRun(start, end));
+                    System.out.println(displayRun(tempComic, tempComic));
+                } else {
+                    System.out.println(displayRun(start, tempComic));
+                }
+                
+            } else if(!Arrays.toString(tempComic.getWriter()).equals(Arrays.toString(start.getWriter()))){
+                System.out.println(displayRun(start, end));
+                start = tempComic;
+                end = start;
+            } else {
+                end = tempComic;
+            }
+            i++;
         }
+        System.out.println("###########\n");
+    }
+
+    String displayRun(Comic start, Comic end){
+        String writer = Arrays.toString(start.getWriter());
+        String artist = Arrays.toString(start.getArtist());
+        double startNum = start.getNumber();
+        double endNum = end.getNumber();
+        return startNum + (startNum != endNum ? (" - " + endNum) : "") + "\nWriter: " + writer.substring(1,writer.length()-1) + "\nArtist: " + artist.substring(1,artist.length()-1) + "\n";
     }
 }
