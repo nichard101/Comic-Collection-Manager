@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Comic {
     public String name;
     public double number;
@@ -43,6 +45,22 @@ public class Comic {
 
     /**
      * 
+     * @return Issue name
+     */
+    public String getName(){
+        return this.name;
+    }
+
+    /**
+     * 
+     * @return Issue number
+     */
+    public Double getNumber(){
+        return this.number;
+    }
+
+    /**
+     * 
      * @return String array of writer/s
      */
     public String[] getWriter(){
@@ -55,5 +73,9 @@ public class Comic {
      */
     public String[] getArtist(){
         return this.artist;
+    }
+
+    public String displayComic(){
+        return name + " " + number + "\nWriter: " + Arrays.toString(writer) + "\nArtist: " + Arrays.toString(artist);
     }
 }

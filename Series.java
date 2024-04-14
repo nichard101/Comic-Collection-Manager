@@ -80,7 +80,7 @@ public class Series {
     public void displaySeries(){
         System.out.println(name + " - " + getSize() + " issues\n");
         for(Comic c : comicList){
-            System.out.println(c.displayComic());
+            System.out.println(c.displayComic() + "\n");
         }
     }
 }
